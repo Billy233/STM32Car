@@ -2,7 +2,9 @@
   "name": "2-1",
   "type": "ARM",
   "dependenceList": [],
-  "srcDirs": [],
+  "srcDirs": [
+    ".eide/deps"
+  ],
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
@@ -246,7 +248,9 @@
   "outDir": "build",
   "deviceName": null,
   "packDir": null,
-  "miscInfo": {},
+  "miscInfo": {
+    "uid": "daaf29ff696d5897aa5b45f89df84e97"
+  },
   "targets": {
     "Target 1": {
       "excludeList": [],
@@ -379,8 +383,6 @@
       "uploadConfigMap": {},
       "custom_dep": {
         "name": "default",
-        "sourceDirList": [],
-        "libList": [],
         "incList": [
           "Start",
           "User",
@@ -388,8 +390,11 @@
           "Device",
           "System",
           ".cmsis/include",
-          "RTE/_Target 1"
+          "RTE/_Target 1",
+          ".eide/deps"
         ],
+        "libList": [],
+        "sourceDirList": [],
         "defineList": [
           "USE_STDPERIPH_DRIVER"
         ]
