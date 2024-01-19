@@ -3,6 +3,7 @@
 #include "Serial.h"
 #include "oled.h"
 
+//test stm32Car
 int main(void) {
 	
 	LED_Init(GPIOB, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14);
