@@ -2,7 +2,7 @@
 
 ### PCB and Hardware
 
-PCB is opensource on LCEDA: [https://oshwhub.com/shao132/stm32car](https://oshwhub.com/shao132/stm32car)
+PCB is opensource on LCEDA: [https://oshwhub.com/shao132/stm32car](https://oshwhub.com/shao132/stm32car) (invalid)
 
 ### Updates
 
