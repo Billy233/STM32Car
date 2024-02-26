@@ -15,6 +15,11 @@
         "folders": []
       },
       {
+        "name": "::Compiler",
+        "files": [],
+        "folders": []
+      },
+      {
         "name": "Application",
         "files": [],
         "folders": [
@@ -35,10 +40,25 @@
                 "name": "Core",
                 "files": [
                   {
+                    "path": "../Core/Src/main.cpp"
+                  },
+                  {
                     "path": "../Core/Src/main.c"
                   },
                   {
+                    "path": "../Core/Src/gpio.c"
+                  },
+                  {
                     "path": "../Core/Src/freertos.c"
+                  },
+                  {
+                    "path": "../Core/Src/adc.c"
+                  },
+                  {
+                    "path": "../Core/Src/tim.c"
+                  },
+                  {
+                    "path": "../Core/Src/usart.c"
                   },
                   {
                     "path": "../Core/Src/stm32f1xx_it.c"
@@ -60,15 +80,6 @@
         "name": "Drivers",
         "files": [],
         "folders": [
-          {
-            "name": "CMSIS",
-            "files": [
-              {
-                "path": "../Core/Src/system_stm32f1xx.c"
-              }
-            ],
-            "folders": []
-          },
           {
             "name": "STM32F1xx_HAL_Driver",
             "files": [
@@ -122,6 +133,15 @@
               }
             ],
             "folders": []
+          },
+          {
+            "name": "CMSIS",
+            "files": [
+              {
+                "path": "../Core/Src/system_stm32f1xx.c"
+              }
+            ],
+            "folders": []
           }
         ]
       },
@@ -133,9 +153,6 @@
             "name": "FreeRTOS",
             "files": [
               {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c"
-              },
-              {
                 "path": "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c"
               },
               {
@@ -143,12 +160,6 @@
               },
               {
                 "path": "../Middlewares/Third_Party/FreeRTOS/Source/list.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c"
               },
               {
                 "path": "../Middlewares/Third_Party/FreeRTOS/Source/queue.c"
@@ -161,6 +172,15 @@
               },
               {
                 "path": "../Middlewares/Third_Party/FreeRTOS/Source/timers.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c"
               }
             ],
             "folders": []
@@ -170,22 +190,52 @@
     ]
   },
   "outDir": "build",
-  "deviceName": null,
-  "packDir": null,
+  "deviceName": "STM32F103C8",
+  "packDir": ".pack/Keil/STM32F1xx_DFP.2.3.0",
   "miscInfo": {
-    "uid": "980d875887ed6c4d3a6eefeb6b9cd5c2"
+    "uid": "1a6b0ea51cfeaeb0b6776eff8dd2b59e"
   },
   "targets": {
     "stm32Car": {
       "excludeList": [],
-      "toolchain": "AC5",
+      "toolchain": "AC6",
       "compileConfig": {
         "cpuType": "Cortex-M3",
         "floatingPointHardware": "none",
+        "scatterFilePath": "",
         "useCustomScatterFile": false,
-        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
         "storageLayout": {
           "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
             {
               "tag": "IRAM",
               "id": 1,
@@ -195,18 +245,68 @@
               },
               "isChecked": true,
               "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
             }
           ],
           "ROM": [
             {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
               "tag": "IROM",
               "id": 1,
               "mem": {
-                "startAddr": "0x08000000",
+                "startAddr": "0x8000000",
                 "size": "0x10000"
               },
               "isChecked": true,
               "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
             }
           ]
         },
@@ -243,8 +343,7 @@
           "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3",
           "../Drivers/CMSIS/Device/ST/STM32F1xx/Include",
           "../Drivers/CMSIS/Include",
-          "RTE/_stm32Car",
-          ".eide/deps"
+          "RTE/_stm32Car"
         ],
         "libList": [],
         "sourceDirList": [],

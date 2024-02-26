@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Billy Shao, HIT, LIC=X96CK-ZXVGJ-MMH9I-TDP7R-DMA3Y-R79VS
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\Embedded\CubeMXprojects\STM32Car\MDK-ARM\stm32Car.uvprojx
+Project File Date:  02/18/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'stm32Car'
+Note: source file '../Core/Src/main.c' - object file renamed from 'stm32Car\main.o' to 'stm32Car\main_1.o'.
+compiling usart.c...
+../Core/Src/usart.c(208): error:  #20: identifier "FILE" is undefined
+  int fputc(int ch, FILE *f)
+../Core/Src/usart.c: 0 warnings, 1 error
+compiling main.cpp...
+..\Core\Src\main.cpp(80): error:  #2901: Expected an inline assembly instruction
+  	__asm(".global __use_no_semihosting\n\t");
+..\Core\Src\main.cpp(80): error:  #3081: expected end of line or a ";"
+  	__asm(".global __use_no_semihosting\n\t");
+..\Core\Src\main.cpp: 0 warnings, 2 errors
+"stm32Car\stm32Car.axf" - 3 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.ARM_Compiler.1.7.2.pack
+                Keil::ARM_Compiler@1.7.2
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: STDIN Variant: Breakpoint Version: 1.2.0
+   * Component: STDOUT Variant: Breakpoint Version: 1.2.0
+   * Component: TTY Variant: Breakpoint Version: 1.2.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_stm32Car
+  C:/Users/BillyShao/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/BillyShao/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+
+   * Component: Keil::Compiler&ARM Compiler:I/O:STDIN&Breakpoint@1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Compiler&ARM Compiler:I/O:STDOUT&Breakpoint@1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Compiler&ARM Compiler:I/O:TTY&Breakpoint@1.2.0
+      Source file:   Source/retarget_io.c
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
